@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1458609070 source:c:\users\alumno\desktop\tp_1_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1458609070 .h"
+
+1458609532 c:\users\alumno\desktop\tp_1_cascara\funciones.h
+
+1458614946 source:/home/agustin/Documentos/Programacion  1° cuatrimestre/WS-prog-1/TP_1_Cascara/main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1458615794 /home/agustin/Documentos/Programacion  1° cuatrimestre/WS-prog-1/TP_1_Cascara/funciones.h
+
+1459033773 source:/home/agustin/Documentos/Programacion  1° cuatrimestre/TPs/TP1/TP_1_Cascara/main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<ctype.h>
+
+1459033665 /home/agustin/Documentos/Programacion  1° cuatrimestre/TPs/TP1/TP_1_Cascara/funciones.h
+	<math.h>
+
