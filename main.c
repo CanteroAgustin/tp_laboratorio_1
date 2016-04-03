@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "funciones.h"
 
+//v1.0
 
 int main()
 {
@@ -31,6 +32,7 @@ int main()
         {
             case 1:
                     do{
+                    printf("-------------------------------------------------------------\n");
                     printf("Ingrese el primer numero \n");
                     setbuf(stdin, NULL);
                     }
@@ -38,6 +40,7 @@ int main()
                 break;
             case 2:
                     do{
+                    printf("-------------------------------------------------------------\n");
                     printf("Ingrese el segundo numero \n");
                     setbuf(stdin, NULL);
                     }
