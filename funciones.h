@@ -1,83 +1,98 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
-#include <math.h>
 
 
-/**
- * \brief Recibe dos numeros, los suma e imprime el resultado por pantalla
- * \param operando1, operando 2 numeros a sumar
- *
- */
-void sumar(float operando1, float operando2){
-    float suma = 0;
-    suma=operando1+operando2;
-    printf("El resultado de la suma (A+B) es: %.2f\n",suma);
+
+void sumar(float operando1, float operando2, int flagIngresoOperando1, int flagIngresoOperando2){
+    float suma=0;
+    if (flagIngresoOperando1 == 1 && flagIngresoOperando2 == 1){
+        suma=operando1+operando2;
+         printf("El resultado de la suma es: %.2f \n",suma);
+    }else{
+        printf("Error, no se puede realizar la operacion. Debe ingresar ambos operandos \n");
+    }
+
 }
 
-/**
- * \brief Recibe dos numeros, los resta e imprime el resultado por pantalla
- * \param operando1, operando 2 numeros a restar
- *
- */
-void restar(float operando1, float operando2){
+void restar(float operando1, float operando2, int flagIngresoOperando1, int flagIngresoOperando2){
     float resta;
-    resta=operando1-operando2;
-    printf("El resultado de la resta (A-B) es: %.2f\n",resta);
+    if (flagIngresoOperando1 == 1 && flagIngresoOperando2 == 1){
+        resta=operando1-operando2;
+        printf("El resultado de la resta es: %.2f\n",resta);
+    }else{
+        printf("Error, no se puede realizar la operacion. Debe ingresar ambos operandos \n");
+    }
 }
 
-/**
- * \brief Recibe dos numeros, los multiplica e imprime el resultado por pantalla
- * \param operando1, operando 2 numeros a multiplicar
- *
- */
-void multiplicar(float operando1, float operando2){
+void multiplicar(float operando1, float operando2, int flagIngresoOperando1, int flagIngresoOperando2){
+
     float multiplicacion;
-    multiplicacion=operando1*operando2;
-    printf("El resultado de la multiplicacion (A*B) es: %.2f\n",multiplicacion);
+
+    if (flagIngresoOperando1 == 1 && flagIngresoOperando2 == 1){
+        multiplicacion=operando1*operando2;
+        printf("El resultado de la multiplicacion es: %.2f\n",multiplicacion);
+    }else{
+        printf("Error, no se puede realizar la operacion. Debe ingresar ambos operandos \n");
+    }
 }
 
-/**
- * \brief Recibe dos numeros, los divide e imprime el resultado por pantalla
- * \param operando1, operando 2 numeros a dividir
- *
- */
-void dividir(float operando1, float operando2){
+void dividir(float operando1, float operando2, int flagIngresoOperando1, int flagIngresoOperando2){
+
     float division;
-    if (operando2 == 0){
-        printf("No se puede dividir por 0\n");
 
-
+    if (flagIngresoOperando1 == 1 && flagIngresoOperando2 == 1){
+        if(operando2==0){
+            printf("Error, la division por 0 no esta definida\n");
+        }else{
+            division=operando1/operando2;
+            printf("El resultado de la division es: %.2f\n",division);
+        }
     }else{
-    division=operando1/operando2;
-    printf("El resultado de la division (A/B) es: %.2f\n",division);
+        printf("Error, no se puede realizar la operacion. Debe ingresar ambos operandos \n");
     }
-
 }
 
-/**
- * \brief Recibe un numero, calcula el factorial e imprime el resultado por pantalla
- * \param operando1, numero sobre el que se calculara el factorial
- *
- */
-void calcularFactorial(float operando1){
-    int factor=1;
-    int auxiliar = 0;
-    auxiliar = (int) operando1;
-    if (operando1 <= 0){
-        printf("Solo se puede calcular falctorial de un entero positivo\n");
+void calcularFactorial(int operando1, int flagIngresoOperando1){
 
+    long int factor=1;
 
+    if (flagIngresoOperando1 == 1){
+        if (operando1 <= 0){
+            printf("Solo se puede calcular falctorial de un entero positivo\n");
+        }else{
+            while (operando1 > 0)
+                {
+                    factor = operando1 * factor;
+                    operando1--;
+                }
+        printf("El factorial de (A) es: %ld\n", factor);
+        }
     }else{
-        while (auxiliar > 0)
-            {
-
-
-                factor = auxiliar * factor;
-                auxiliar--;
-            }
-            printf("El factorial de (A) es: %d\n", factor);
+        printf("Error, no se puede realizar la operacion. Debe ingresar el primer operando \n");
     }
-
 }
 
+int imprimirMenu(float operando1, float operando2){
+
+    int opcion=0;
+
+    do{
+        printf("*************************************************\n");
+        printf("Ingrese una opcion (1-9):\n");
+        printf("1- Ingresar 1er operando (A=%.2f)\n",operando1);
+        printf("2- Ingresar 2do operando (B=%.2f)\n",operando2);
+        printf("3- Calcular la suma (A+B)\n");
+        printf("4- Calcular la resta (A-B)\n");
+        printf("5- Calcular la division (A/B)\n");
+        printf("6- Calcular la multiplicacion (A*B)\n");
+        printf("7- Calcular el factorial (A!)\n");
+        printf("8- Calcular todas las operacione\n");
+        printf("9- Salir\n");
+
+        setbuf(stdin, NULL);
+    }
+    while(scanf("%d", &opcion)!= 1);
+
+    return opcion;
+}
 #endif // FUNCIONES_H_INCLUDED
