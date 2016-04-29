@@ -1,0 +1,84 @@
+# depslib dependency file v1.0
+1461719324 source:/home/agustin/Documentos/Programacion  1° cuatrimestre/TPs/TP2/TP_2_Cascara/main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"conio.c"
+
+1461717763 /home/agustin/Documentos/Programacion  1° cuatrimestre/TPs/TP2/TP_2_Cascara/funciones.h
+
+1461718386 /home/agustin/Documentos/Programacion  1° cuatrimestre/TPs/TP2/TP_2_Cascara/conio.h
+	<termios.h>
+	<stdio.h>
+
+1461719378 source:/home/agustin/Documentos/Programacion  1° cuatrimestre/TPs/TP2/TP_2_Cascara/conio.c
+	<termios.h>
+	<unistd.h>
+	<stdio.h>
+
+1461719378 /home/agustin/Documentos/Programacion  1° cuatrimestre/TPs/TP2/TP_2_Cascara/conio.c
+	<termios.h>
+	<unistd.h>
+	<stdio.h>
+
+1461933330 source:c:\users\carodriguez\desktop\tp2\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<conio.h>
+
+1461929352 c:\users\carodriguez\desktop\tp2\tp_2_cascara\funciones.h
+
+1461932888 source:c:\users\carodriguez\desktop\tp2\tp_2_cascara\funciones.c
+	"funciones.h"
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1461807019 source:c:\users\agustin\desktop\tp2\tp_2_cascara\funciones.c
+	"funciones.h"
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1461806920 c:\users\agustin\desktop\tp2\tp_2_cascara\funciones.h
+
+1461805115 source:c:\users\agustin\desktop\tp2\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<conio.h>
+
+1461870098 source:c:\users\alumno.lab5pc03\desktop\tp2\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<conio.h>
+
+1461869268 c:\users\alumno.lab5pc03\desktop\tp2\tp_2_cascara\funciones.h
+
+1461881950 source:c:\users\alumno.lab5pc03\desktop\tp2\tp_2_cascara\funciones.c
+	"funciones.h"
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1461968672 source:c:\users\carodriguez\desktop\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<conio.h>
+
+1461968110 c:\users\carodriguez\desktop\tp_2_cascara\funciones.h
+
+1461970269 source:c:\users\carodriguez\desktop\tp_2_cascara\funciones.c
+	"funciones.h"
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
