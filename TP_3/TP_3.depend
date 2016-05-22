@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1463948109 source:c:\users\carodriguez\desktop\tp_3\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+
+1463946009 source:c:\users\carodriguez\desktop\tp_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"peliculas.h"
+
+1463948172 c:\users\carodriguez\desktop\tp_3\funciones.h
+
+1463932122 c:\users\carodriguez\desktop\tp_3\peliculas.h
+
+1463946694 source:c:\users\carodriguez\desktop\tp_3\peliculas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"peliculas.h"
+	"funciones.h"
+
