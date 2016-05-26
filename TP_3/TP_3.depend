@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1463948109 source:c:\users\carodriguez\desktop\tp_3\funciones.c
+1463970742 source:c:\users\carodriguez\desktop\tp_3\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -12,11 +12,36 @@
 	"funciones.h"
 	"peliculas.h"
 
-1463948172 c:\users\carodriguez\desktop\tp_3\funciones.h
+1463969219 c:\users\carodriguez\desktop\tp_3\funciones.h
 
-1463932122 c:\users\carodriguez\desktop\tp_3\peliculas.h
+1464225708 c:\users\carodriguez\desktop\tp_3\peliculas.h
 
-1463946694 source:c:\users\carodriguez\desktop\tp_3\peliculas.c
+1464225874 source:c:\users\carodriguez\desktop\tp_3\peliculas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"peliculas.h"
+	"funciones.h"
+
+1463970742 source:c:\users\carodriguez\desktop\documentos varios\personal\programacion  1° cuatrimestre\tps\tp3\tp_3\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+
+1463969219 c:\users\carodriguez\desktop\documentos varios\personal\programacion  1° cuatrimestre\tps\tp3\tp_3\funciones.h
+
+1463946009 source:c:\users\carodriguez\desktop\documentos varios\personal\programacion  1° cuatrimestre\tps\tp3\tp_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"peliculas.h"
+
+1463932122 c:\users\carodriguez\desktop\documentos varios\personal\programacion  1° cuatrimestre\tps\tp3\tp_3\peliculas.h
+
+1463969782 source:c:\users\carodriguez\desktop\documentos varios\personal\programacion  1° cuatrimestre\tps\tp3\tp_3\peliculas.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

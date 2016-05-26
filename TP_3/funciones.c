@@ -179,3 +179,24 @@ int getAlNumPunctSpace(char* input,char message[],char eMessage[], int lowLimit,
 
     return retorno;
 }
+
+int getAllString(char* input,char message[],char eMessage[], int lowLimit, int hiLimit){
+    char aux[46034];
+    int retorno;
+    printf("%s",message);
+    fflush(stdin);
+    gets(aux);
+    if(!strlen(aux)>0){
+        retorno = -1;
+        printf("Error, Este campo no puede quedar vacio. Reingrese\n");
+    }
+    if( strlen(aux)>=lowLimit && strlen(aux)<=hiLimit){
+        strcpy(input,aux);
+        retorno = 0;
+    }else{
+        printf("%s",eMessage);
+        retorno = -1;
+        system("pause");
+    }
+    return retorno;
+}

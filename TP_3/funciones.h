@@ -13,6 +13,6 @@ int getString(char* input,char message[],char eMessage[], int lowLimit, int hiLi
 int getStringNumber(char* input,char message[],char eMessage[], int lowLimit, int hiLimit);
 int getAlNum(char* input,char message[],char eMessage[], int lowLimit, int hiLimit);
 int getAlNumPunctSpace(char* input,char message[],char eMessage[], int lowLimit, int hiLimit);
-
+int getAllString(char* input,char message[],char eMessage[], int lowLimit, int hiLimit);
 
 #endif // FUNCIONES_H_INCLUDED

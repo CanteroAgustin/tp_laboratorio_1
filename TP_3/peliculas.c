@@ -7,7 +7,7 @@
 #define ELEMENT 1000
 /** \brief inicializa la extructura recibida
  *
- * \param arrayAviones Eaviones* extructura a inicializar
+ * \param arrayMovies Emovies* extructura a inicializar
  * \param length int largo del array
  * \return void
  *
@@ -59,7 +59,7 @@ int agregarPelicula(EMovie* arrayMovies, int length){
 
     int retorno = 0, i, flagExiste=-1;
     int horas, minutos, puntaje;
-    char titulo [50], descripcion[50],linkImagen[50], genero[50];
+    char titulo [50], descripcion[50],linkImagen[500], genero[50];
     int espacioLibre = buscarEspacioLibre(arrayMovies, length);
 
 
@@ -83,7 +83,7 @@ int agregarPelicula(EMovie* arrayMovies, int length){
             while(getInt(&horas,"* Ingrese Horas de duracion:\n  ","Error, fuera de rango. Reingrese\n", 0, 99));
             while(getInt(&minutos,"* Ingrese Minutos de duracion:\n  ","Error, fuera de rango. Reingrese\n", 0, 59));
             while(getAlNumPunctSpace(descripcion,"* Ingrese Descripcion:\n  ","Error, el largo maximo es 20 caracteres. Reingrese\n", 0, 1000));
-            while(getString(linkImagen,"* Ingrese LinkImagen:\n  ","Error, el largo maximo es 20 caracteres. Reingrese\n", 0, 20));
+            while(getAllString(linkImagen,"* Ingrese LinkImagen:\n  ","Error, el largo maximo es 500 caracteres. Reingrese\n", 0, 500));
             while(getInt(&puntaje,"* Ingrese Puntaje:\n  ","Error, fuera de rango. Reingrese\n", 1, 10));
 
             strcpy(arrayMovies[espacioLibre].titulo,titulo);
@@ -94,6 +94,9 @@ int agregarPelicula(EMovie* arrayMovies, int length){
             arrayMovies[espacioLibre].duracion.minutos=minutos;
             arrayMovies[espacioLibre].puntaje=puntaje;
             arrayMovies[espacioLibre].isEmpty=1;
+        }else{
+            printf("\nError. El titulo ingresado ya existe.\n\n");
+            system("pause");
         }
     }
 
@@ -143,12 +146,17 @@ void generarPagina(EMovie* arrayMovies, char nombre[]){
     }
     else
     {
+        fprintf(f,"<!DOCTYPE html><!-- Template by Quackit.com --><html lang='en'>");
+        fprintf(f,"<head><meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=device-width, initial-scale=1'><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><title>Lista peliculas</title><!-- Bootstrap Core CSS --><link href='css/bootstrap.min.css' rel='stylesheet'><!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles --><link href='css/custom.css' rel='stylesheet'><!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]><script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script><script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script><![endif]--></head>");
+        fprintf(f,"<body><div class='container'><div class='row'>");
+
         for(i=0;i<1000;i++){
             if(arrayMovies[i].isEmpty==1){
-                fprintf(f,"<article class='col-md-4 article-intro'><a href='#'><img class='img-responsive img-rounded' src='%s' alt=''></a><h3><a href='#'>%s</a></h3><ul><li>Género:%s</li><li>Puntaje:%d</li><li>Duración:%d:%d</li></ul><p>%s</p></article><br><br><HR>",arrayMovies[i].linkImagen,arrayMovies[i].titulo,arrayMovies[i].genero,arrayMovies[i].puntaje,arrayMovies[i].duracion.horas,arrayMovies[i].duracion.minutos,arrayMovies[i].descripcion);
+                fprintf(f,"<!-- Repetir esto para cada pelicula --><article class='col-md-4 article-intro'><a href='#'><img class='img-responsive img-rounded' src='%s' alt=''></a><h3><a href='#'>%s</a></h3><ul><li>G&eacutenero:%s</li><li>Puntaje:%d</li><li>Duraci&oacuten:%d:%d</li></ul><p>%s</p></article><!-- Repetir esto para cada pelicula -->",arrayMovies[i].linkImagen,arrayMovies[i].titulo,arrayMovies[i].genero,arrayMovies[i].puntaje,arrayMovies[i].duracion.horas,arrayMovies[i].duracion.minutos,arrayMovies[i].descripcion);
             }
         }
-    }
+        fprintf(f,"</div><!-- /.row --></div><!-- /.container --><!-- jQuery --><script src='js/jquery-1.11.3.min.js'></script><!-- Bootstrap Core JavaScript --><script src='js/bootstrap.min.js'></script><!-- IE10 viewport bug workaround --><script src='js/ie10-viewport-bug-workaround.js'></script><!-- Placeholder Images --><script src='js/holder.min.js'></script></body></html>");
+        }
 
       fclose(f);
 
@@ -181,7 +189,7 @@ void modificarPelicula(EMovie* arrayMovies, int length){
     int i,opcion;
     char seguir='s';
     int horas, minutos, puntaje;
-    char titulo [50], descripcion[50],linkImagen[50], genero[50];
+    char titulo [50], descripcion[50],linkImagen[500], genero[50];
     system("cls");
     printf("*Modificando pelicula *\n");
 
@@ -222,7 +230,7 @@ void modificarPelicula(EMovie* arrayMovies, int length){
                             arrayMovies[i].puntaje=puntaje;
                         break;
                     case 6:
-                            while(getAlNumPunctSpace(linkImagen,"* Ingrese LinkImagen:\n  ","Error, el largo maximo es 20 caracteres. Reingrese\n", 0, 20));
+                            while(getAllString(linkImagen,"* Ingrese LinkImagen:\n  ","Error, el largo maximo es 500 caracteres. Reingrese\n", 0, 500));
                             strcpy(arrayMovies[i].linkImagen,linkImagen);
                         break;
                     case 0:
